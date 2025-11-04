@@ -31,10 +31,21 @@ let negValue = -value
 let str1 = "Hello"
 let str2 = "Thomas"
 
-let str3 = str1 + str2
-console.log(str3);
+// let str3 = str1 + str2
+// console.log(str3);
 
-console.log("1"+2);
-console.log(1+"2");
-console.log("1"+2+2);
-console.log(1+2+"2");
+// console.log("1"+2);
+// console.log(1+"2");
+// console.log("1"+2+2);
+// console.log(1+2+"2");
+
+console.log(t+rue);
+console.log(+"");
+
+
+let num1 , num2 , num3
+num1 = num2 = num3 = 2+2
+
+let gameCounter = 100
+gameCounter++;
+console.log(gameCounter);
