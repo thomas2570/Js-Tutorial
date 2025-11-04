@@ -5,6 +5,7 @@
 let name = "Thomas"
 let age = 21
 let isLoggedIn = false
+let state; // undefined
 
 // number = 2 to poer 53
 //bigint
@@ -13,8 +14,8 @@ let isLoggedIn = false
 //null= standlone value
 //undefined = 
 //symbol = used in react (unique)
-//object
 
+//object
 
 console.log(typeof null); // interviwe question what is null = object(ans)
 console.log(typeof undefined); // fpr value
