@@ -39,10 +39,36 @@ let myObj =
 // Array 
 // Object
 // Functions
-
-function myfunction = function(){
-console.log("Hello World");
+function myFunction() {
+    console.log("Hello!");
 }
-
+myFunction();
 
 console.log(typeof bigNumber);
+
+
+
+// ********************************* Memories in Js *********************************************//
+
+
+// Stack Memory(primitive) , heap Memory(Non-primitive)
+ let myYoutubename = "elitesgaming01"
+ 
+ let anothername = myYoutubename
+ anothername = "elitesgaming02"
+
+ console.log(myYoutubename);
+ console.log(anothername);
+
+ const user = {
+    email: "user@google.com",
+    upi: "user@ybl"
+};
+
+ let usertwo = user
+
+ usertwo.email = "thomas@google.com"
+
+ console.log(user.email);
+
+    console.log(usertwo.email);
