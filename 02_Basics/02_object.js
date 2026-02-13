@@ -2,7 +2,7 @@
 const tinderuser = {}
 
 tinderuser.id = "123abc";
-tinderuser.name = "THomas";
+tinderuser.name = "Thomas";
 tinderuser.isLoggedIn = false;
 
 
@@ -79,4 +79,4 @@ console.log(instructor);
     {},
     {}
 
-
+]
