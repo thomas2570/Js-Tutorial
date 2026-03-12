@@ -23,7 +23,7 @@ console.log(id === anotherId);
 
 const bigNumber = 3456789012345678901234567890n;
 
-const heros = ["Shaktiman", "Naagraj", "Doga"];
+const heros = ["Shaktiman", "Naagraj", "Doga"]; // Non-Primitive type.
 let myObj = 
 {
     name:"Thomas",
