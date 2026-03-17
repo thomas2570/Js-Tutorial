@@ -23,17 +23,17 @@ const newString = gameName.substring(0, 4);
 console.log(newString);
 
 
-const anotherString = gameName.slice(-8,5);
+const anotherString = gameName.slice(-8, 5);
 console.log(anotherString);
 
-const  newStringOne = "   Thomas Ramesh   "
+const newStringOne = "   Thomas Ramesh   "
 console.log(newStringOne);
 console.log(newStringOne.trim());
 
 const url = "https://www.thomasramesh.com/about.html"
 
- console.log(url.replace('about','contact'));
-  
- console.log(url.includes('thomasramesh'));
-   
+console.log(url.replace('about', 'contact'));
+
+console.log(url.includes('thomasramesh'));
+
 console.log(gameName.split('-'));
