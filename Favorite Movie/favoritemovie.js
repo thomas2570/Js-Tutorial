@@ -9,3 +9,7 @@ while((guess != favMovie) && (guess != "quit")){
 if(guess == favMovie){
     console.log("Congrats!!")
 }
+else{
+    console.log("you quit");
+    
+}
