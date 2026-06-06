@@ -1,6 +1,19 @@
 const accountId = 14453
+
+// tbhi create kariye jab value naa badle
+
 let accountEmail = "thomasramesh@gmail.com"
+// blocked scope hota hai
+// { in side of this function }
+// global scope
+
+
 var accountPassword = "12345"
+
+// var window me add hota hai
+// function scoped hota hai it mean ye pure function me kahi bhi use ho sakta hai
+// ap fir se declare kar sakte ho same name se and errors nahi aayega
+
 accountCity = "Delhi"
 
 // accountId = 2 not allowed
