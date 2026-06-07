@@ -29,3 +29,19 @@ because of issue in block scope and functional scope
 */
 
 console.table([accountId,accountEmail,accountPassword,accountCity]);
+
+// Temporal dead zone
+// utna area jitna mai js ko pata hai ki variable exist karta hai per wo aapko value nhi de sakta
+
+//             ------   hoisting   --------------------
+
+// ak variable ko jab js me banate hai to wo variable do hiso me toot jata hai and uska declare part upar chala jata hai and intitialization part neeche rah jata hai
+
+console.log(a)
+
+var a = 12;
+
+// divide part 
+
+ var a = undefined;
+ a = 12; //  -- uppar chala jata hai
