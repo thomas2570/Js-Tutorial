@@ -36,3 +36,17 @@ JsUser.greetingTwo = function(){
 
 console.log(JsUser.greeting());
 console.log(JsUser.greetingTwo());
+
+// -------------------------- Objects -------------------------------------------------------------
+
+let obj = {
+    name: "Thomas",
+    age: 21,
+    khana: "daal cahwal",
+};
+
+obj['age']
+
+// -------------------- object.entries --------------------------
+
+let obj2 = {}

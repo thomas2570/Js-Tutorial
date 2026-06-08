@@ -12,7 +12,7 @@ const myArr2 = (1,2,3,4)
 // myArr.push(7)
 // myArr.pop(2)
 
-// myArr.unshift(9)
+// myArr.unshift(9) // shuruat me ak value add karta hai
 // myArr.shift()
 
 // console.log(myArr.includes(9)); // false
@@ -23,7 +23,7 @@ const myArr2 = (1,2,3,4)
 // console.log(myArr);
 // console.log(typeof newArr);
 
-// slice, splice
+// slice(return new copy array), splice (bich se value hata sakte ho)
 
 console.log("A", myArr);
 
@@ -36,7 +36,6 @@ console.log("B",myArr);
 const myn2 = myArr.splice(1,3)
 console.log("C", myArr);
 console.log(myn2);
-
 
 
 
