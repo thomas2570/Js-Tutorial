@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at top, #18305b, #0b1223);
+    color: #f7f9ff;
+}
+
+nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #e8f3ff;
+    border: 1px solid rgba(232, 243, 255, 0.4);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    transition: all 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    background: rgba(232, 243, 255, 0.08);
+    border-color: rgba(232, 243, 255, 0.7);
+}
+
+.conter {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+#banner {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #d7e1ff;
+}
+
+#clock {
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    padding: 1.5rem 2rem;
+    border-radius: 28px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 0 25px rgba(90, 150, 255, 0.35);
+}
+
+@media (max-width: 640px) {
+    nav {
+        position: static;
+        margin-bottom: 1.5rem;
+    }
+
+    .conter {
+        justify-content: flex-start;
+        padding-top: 3rem;
+    }
+
+    #banner {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    #clock {
+        width: 100%;
+        max-width: 420px;
+        padding: 1.3rem 1.4rem;
+    }
+}
