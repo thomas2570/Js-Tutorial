@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chai aur code </title>
+    <title> Thomas Ramesh </title>
 </head>
 <body style="background-color: #212121; color: #fff;">
     
@@ -16,9 +16,15 @@
     div.id = Math.round(Math.random() * 10 + 1)
     div.setAttribute("title", "generated title")
     div.style.backgroundColor = "green"
-    div.style.padding = "12px"
-    // div.innerText = "Chai aur code"
-    const addText = document.createTextNode("Chai aur code")
+    div.style.padding = "12px"  // ===========> ye uppar ke sare code humne div create kara hai page per visible nhi honge because of ye abhi memory ke ander hai visible karne ke liye document ko  child se add karna hota hai  
+
+//---------------------- niche hum add karna sikha hai 
+
+    // div.innerText = "Thomas Ramesh" // value ka refrance lata hai aur override karta hai 
+
+    //<------------------- 2nd method ----------------> 
+    
+    const addText = document.createTextNode("Thomas Ramesh") 
     div.appendChild(addText)
 
     document.body.appendChild(div)

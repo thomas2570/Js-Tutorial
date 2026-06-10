@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM | Chai aur code</title>
+    <title>DOM |Thomas Ramesh</title>
 </head>
 <body style="background-color: #212121; color: #fff;">
     <div class="parent">
@@ -16,24 +16,29 @@
     </div>
 </body>
 <script>
-    const parent = document.querySelector('.parent')
+    const parent = document.querySelector('.parent') //--->  pata karte hai kon kon values hai parent ke ander 
     // console.log(parent);
-    // console.log(parent.children);
-    // console.log(parent.children[1].innerHTML);
+    // console.log(parent.children);  ------------------> kitne children hai ye batata hai 
+    // console.log(parent.children[1].innerHTML); ---------> 
+
+    // ----------------------
 
     // for (let i = 0; i < parent.children.length; i++) {
     //      console.log(parent.children[i].innerHTML);
         
     // }
+
+    // ---------------------- styling change karne ke liye ------------------
+
     parent.children[1].style.color = "orange"
-    // console.log(parent.firstElementChild);
-    // console.log(parent.lastElementChild);
+    // console.log(parent.firstElementChild); ======>  kisi element ko target kar rhe ho inner jana hai aur ye parent se child se move kara rhe hai
+    // console.log(parent.lastElementChild); ============> 
 
-    const dayOne = document.querySelector('.day')
+    const dayOne = document.querySelector('.day') //================> ye child se parent se move karta hai
     // console.log(dayOne);
-    // console.log(dayOne.parentElement);
-    // console.log(dayOne.nextElementSibling);
+    // console.log(dayOne.parentElement); //======>  day one se parent element ja rha hai
+    // console.log(dayOne.nextElementSibling); ==============> next move means siblings track karta hai
 
-    console.log("NODES: ", parent.childNodes);
+    console.log("NODES: ", parent.childNodes);  //=====================> 
 </script>
 </html>
