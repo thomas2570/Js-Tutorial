@@ -32,3 +32,7 @@ e('f', 'g');
 // first class function - a function that can be treated like any other value, meaning it can be assigned to a variable, passed as an argument to another function, or returned from another function. In JavaScript, functions are first-class citizens, which means they can be used in these ways.
 
 // Arrow function - a shorthand syntax for writing function expressions. Arrow functions are always anonymous, and they do not have their own 'this' value, which means they inherit 'this' from the surrounding scope. Arrow functions are often used for short, simple functions, or as callbacks in higher-order functions.
+
+var f = () => {
+    console.log('f');
+}
