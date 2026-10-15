@@ -114,12 +114,12 @@ const getPromise = () =>{
   });
 }
 
-let promise = getPromise();
-promise.then((res) => {
+let getPromiseResult = getPromise();
+getPromiseResult.then((res) => {
     console.log("promise resolved with data:", res);
 });
 
-promise.catch((err) => {
+getPromiseResult.catch((err) => {
     console.log("promise rejected with error:", err);
 });
 
@@ -127,3 +127,49 @@ promise.catch((err) => {
 
 
 // ------------------  Async/Await  ----------------- 
+
+async function hello(){
+    console.log("Hello, world!");
+}
+// explain ("This code demonstrates the use of the 'async' keyword to define an asynchronous function. The 'hello' function is marked as 'async', which allows it to use the 'await' keyword within its body. In this case, the function simply logs 'Hello, world!' to the console. The 'async' keyword indicates that the function may contain asynchronous operations and will return a Promise when called.") 
+
+function api(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("weather api called");
+            resolve(2000);
+        }, 2000);
+    });
+}
+
+async function getWeather(){
+    await api();
+}
+
+// explaine in hindi ("Ye code async/await ka use karke asynchronous operations ko handle karne ka tarika dikhata hai. 'api' function ek Promise return karta hai jo 2 seconds ke delay ke baad resolve hota hai aur console me 'weather api called' print karta hai. 'getWeather' function ko 'async' keyword ke sath define kiya gaya hai, jisme 'await' ka use karke 'api' function ke complete hone ka wait kiya jata hai. Isse code zyada readable aur manageable ban jata hai, kyunki ye synchronous code ki tarah lagta hai.")
+
+function getData(dataId, getNextData){ 
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("data", dataId);
+             resolve("Success");
+        }, 2000);
+    });
+}
+
+async function getAllData(){
+    await getData(1);
+    await getData(2);
+    await getData(3);
+}
+
+// explain in hindi ("Ye code async/await ka use karke multiple asynchronous operations ko sequentially handle karne ka tarika dikhata hai. 'getData' function ek Promise return karta hai jo 2 seconds ke delay ke baad resolve hota hai aur console me 'data' aur 'dataId' print karta hai. 'getAllData' function ko 'async' keyword ke sath define kiya gaya hai, jisme 'await' ka use karke pehle 'getData(1)', fir 'getData(2)', aur fir 'getData(3)' ke complete hone ka wait kiya jata hai. Isse code zyada readable aur manageable ban jata hai, kyunki ye synchronous code ki tarah lagta hai aur callback hell se bachata hai.")
+
+// hum ya to async/await ka use karke multiple asynchronous operations ko sequentially handle kar sakte hai ya fir promise chaining ka use karke bhi handle kar sakte hai. Dono hi tarike code ko zyada readable aur manageable banate hai aur callback hell se bachate hai. aur then catch ka use karke bhi promise ko handle kar sakte hai. lakin hum sirf kisi ak ka use karte hai generally hum async await ka use karte hai better to understand hoti hai
+
+
+
+
+
+// ----------------- IIFE -----------------------------------------------------
+
