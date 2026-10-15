@@ -76,3 +76,54 @@ getData(1, () => {
 }); 
 
 // explain ("This code demonstrates the use of nested callbacks to fetch multiple pieces of data in sequence. The 'getData' function is called with a 'dataId' and a callback function that fetches the next piece of data. The first call to 'getData' fetches data with ID 1, and once that is complete, it calls the next 'getData' function to fetch data with ID 2, and so on. This creates a chain of asynchronous operations, but it can lead to 'callback hell' where the code becomes difficult to read and maintain due to the nested structure.")
+
+// call back hell ye hota jab hum ak call back ke andar dusra call back likhte hai aur ye chalta rehta hai. Isse code samajhne me mushkil hoti hai aur maintain karna bhi tough ho jata hai. Is problem ko solve karne ke liye hum promises ya async/await ka use karte hai jo code ko zyada readable aur manageable banata hai.
+
+
+
+//--------------  Promises  ----------------- 
+
+let promise = new Promise((resolve, reject) => {
+    console.log("I am promise");
+    resolve("success");
+    reject("error");
+});
+
+
+// explain - promise ak object hoti hai js me ,jiski state 3 hoti hai - pending, fulfilled, rejected. Promise ka use hum asynchronous operations ke liye karte hai. Promise me hum resolve aur reject ka use karte hai. Agar promise successful hoti hai to resolve call hota hai aur agar promise fail hoti hai to reject call hota hai.
+
+function getData(dataId, getNextData){ 
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("data", dataId);
+             resolve("Success");
+            if(getNextData){
+                getNextData();
+            }
+        }, 2000);
+    });
+}
+
+// explain ("This code demonstrates the use of Promises to handle asynchronous operations. The 'getData' function returns a Promise that simulates fetching data with a delay using 'setTimeout'. When the data is successfully fetched, the Promise is resolved with a success message. If there is an error, the Promise can be rejected. This approach allows for better handling of asynchronous operations compared to nested callbacks, making the code more readable and maintainable.") 
+
+const getPromise = () =>{
+  return new Promise((resolve, reject) => {
+    console.log("I am promise");
+    resolve("success");
+    reject("error");
+  });
+}
+
+let promise = getPromise();
+promise.then((res) => {
+    console.log("promise resolved with data:", res);
+});
+
+promise.catch((err) => {
+    console.log("promise rejected with error:", err);
+});
+
+// explain ("This code demonstrates the use of Promises with the 'then' and 'catch' methods to handle resolved and rejected states. The 'getPromise' function returns a Promise that logs a message and resolves with a success message. The 'then' method is used to handle the resolved state, logging the success message, while the 'catch' method is used to handle any errors that may occur, logging the error message. This approach provides a cleaner and more manageable way to handle asynchronous operations compared to nested callbacks.")  
+
+
+// ------------------  Async/Await  ----------------- 
