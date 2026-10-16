@@ -2,14 +2,26 @@ const BASE_URL =
   "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies";
 
 
-  //
-  
+//   //- const ek variable declare karta hai jise dobara assign nahi kar sakte.
+// - BASE_URL API ka base address hai.
+// - Is URL se currency exchange rates ka JSON data milta hai.
+// Example: Agar tum USD se INR convert karte ho, toh code URL ko aise banata hai:
+
 
 const dropdowns = document.querySelectorAll(".dropdown select");
 const btn = document.querySelector("form button");
 const fromCurr = document.querySelector(".from select");
 const toCurr = document.querySelector(".to select");
 const msg = document.querySelector(".msg");
+
+// document.querySelector() aur document.querySelectorAll() HTML elements ko select karte hain.
+// Code	Kya select karta hai?
+// querySelectorAll(".dropdown select")	Saare currency dropdowns
+// querySelector("form button")	Form ka button
+// querySelector(".from select")	From currency dropdown
+// querySelector(".to select")	To currency dropdown
+// querySelector(".msg")	Result dikhane wala element
+// Important: Ye code tabhi kaam karega jab tumhare HTML mein ye classes aur elements present hon.
 
 for (let select of dropdowns) {
   for (currCode in countryList) {
