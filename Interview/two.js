@@ -4,6 +4,7 @@ Array.prototype.customForEachOne = function(callback){
     }
 }
 // this is basic approach 
+// Explanation: This uses a for loop to iterate through the array and passes three arguments to the callback: the current value, index, and original array.
 
 
 Array.prototype.customForEachTwo = function(callback, thiscontext){
@@ -21,3 +22,17 @@ Array.prototype.customForEachTwo = function(callback, thiscontext){
         i++;
     }
 }
+
+// Explanation: This version validates the callback, skips missing array elements, and uses call() to set the callback's this context.
+
+// 💡 Key Takeaways
+
+// for...in iterates over enumerable property keys.
+
+// hasOwnProperty() distinguishes own properties from inherited ones.
+
+// Array.prototype allows us to add custom methods to arrays.
+
+// Callbacks help us build reusable iteration methods.
+
+// call() allows us to specify the callback's this value.

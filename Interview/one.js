@@ -15,3 +15,5 @@ for(let v in myNewArray){
     
    }
 }
+
+// Explanation: for...in iterates over enumerable property keys, including inherited ones. hasOwnProperty() filters out inherited properties and keeps only properties belonging directly to the array.
