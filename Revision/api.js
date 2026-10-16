@@ -58,13 +58,32 @@ for (let select of dropdowns) {
   });
 }
 
+// //addEventListener("change", ...) tab execute hota hai jab user dropdown ki value change karta hai.
+// - evt event object hai.
+// - evt.target woh dropdown hai jisme change hua.
+// - updateFlag() us currency ke according flag update karta hai
+
 const updateExchangeRate = async () => {
   let amount = document.querySelector(".amount input");
   let amtVal = amount.value;
+
+//   //amount HTML input element ko store karta hai.
+// amount.value user ke entered amount ko read karta hai.
+
+
   if (amtVal === "" || amtVal < 1) {
     amtVal = 1;
     amount.value = "1";
   }
+
+//   Is condition ka meaning:
+// - Agar amount empty hai, toh amount 1 kar do.
+// - Agar amount 1 se kam hai, toh bhi 1 kar do.
+// - Input box mein bhi 1 show karo.
+// Yahan || ka matlab OR hai. Dono conditions mein se koi ek true hui, toh code andar chalega
+
+
+
   const URL = `${BASE_URL}/${fromCurr.value.toLowerCase()}/${toCurr.value.toLowerCase()}.json`;
   let response = await fetch(URL);
   let data = await response.json();
