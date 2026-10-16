@@ -28,11 +28,28 @@ for (let select of dropdowns) {
     let newOption = document.createElement("option");
     newOption.innerText = currCode;
     newOption.value = currCode;
+
+
+//     //Is part ko samjho:
+// - for...of har dropdown par loop chalata hai.
+// - for...in countryList object ki keys par loop chalata hai.
+// - document.createElement("option") naya HTML option banata hai.
+// - innerText dropdown mein visible text set karta hai.
+// - value option ki actual value set karta hai.//
+
+
     if (select.name === "from" && currCode === "USD") {
       newOption.selected = "selected";
     } else if (select.name === "to" && currCode === "INR") {
       newOption.selected = "selected";
     }
+
+
+//     Iska matlab:
+// - Agar dropdown ka name from hai aur currency USD hai, toh USD default select hoga.
+// - Agar dropdown ka name to hai aur currency INR hai, toh INR default select hoga.
+
+
     select.append(newOption);
   }
 
