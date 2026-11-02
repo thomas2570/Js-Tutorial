@@ -1,4 +1,4 @@
-//  wht is IIFE (Immediately Invoked Function Expression) in JavaScript?
+//  what is IIFE (Immediately Invoked Function Expression) in JavaScript?
 
 // An IIFE (Immediately Invoked Function Expression) in JavaScript is a function that is defined and executed immediately after its creation. It is a design pattern that allows you to create a new scope and avoid polluting the global namespace.
 
