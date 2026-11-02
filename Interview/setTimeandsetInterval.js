@@ -11,3 +11,4 @@ const intervalId = setInterval(() => {
 }, 2000);
 
 // output: Interval executed! (every 2 seconds)
+
